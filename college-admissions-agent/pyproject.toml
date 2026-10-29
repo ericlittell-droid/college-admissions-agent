@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "college-admissions-agent"
+version = "1.0.0"
+description = "Enterprise AgentOps Multi-Agent College Application Strategic Advisor"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Eric Littell" }
+]
+dependencies = [
+    "pydantic>=2.5.0",
+    "google-api-python-client>=2.100.0",
+    "google-auth>=2.20.0",
+    "google-cloud-secret-manager>=2.16.0",
+    "google-cloud-logging>=3.8.0",
+    "opentelemetry-api>=1.20.0",
+    "opentelemetry-sdk>=1.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.9.0",
+    "ruff>=0.1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["evals"]
+python_files = ["test_*.py"]

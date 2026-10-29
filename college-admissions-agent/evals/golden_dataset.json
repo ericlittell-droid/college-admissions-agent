@@ -1,0 +1,46 @@
+{
+  "benchmark_profiles": [
+    {
+      "test_case_id": "TC-01-CA-STEM",
+      "description": "California resident, high GPA, strong SAT, interested in Computer Science.",
+      "input_profile": {
+        "home_state": "CA",
+        "unweighted_gpa": 3.88,
+        "sat_score": 1470,
+        "intended_major_field": "Computer Science",
+        "max_cost_of_attendance_budget": 75000.0
+      },
+      "expected_criteria": {
+        "required_public_count": 5,
+        "required_private_count": 5,
+        "must_include_in_state_public": true,
+        "all_institutions_must_have_cost_of_attendance": true,
+        "all_institutions_must_have_endowment": true,
+        "all_institutions_must_have_deadlines": true,
+        "all_institutions_must_have_testing_policy": true,
+        "minimum_guardrail_score": 85.0
+      }
+    },
+    {
+      "test_case_id": "TC-02-NY-BUSINESS",
+      "description": "New York resident, moderate GPA, test-optional applicant, interested in Finance / Economics.",
+      "input_profile": {
+        "home_state": "NY",
+        "unweighted_gpa": 3.45,
+        "sat_score": null,
+        "intended_major_field": "Economics",
+        "max_cost_of_attendance_budget": 60000.0
+      },
+      "expected_criteria": {
+        "required_public_count": 5,
+        "required_private_count": 5,
+        "must_include_in_state_public": false,
+        "all_institutions_must_have_cost_of_attendance": true,
+        "all_institutions_must_have_endowment": true,
+        "all_institutions_must_have_deadlines": true,
+        "all_institutions_must_have_testing_policy": true,
+        "minimum_guardrail_score": 85.0
+      }
+    }
+  ]
+}
